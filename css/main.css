@@ -16,6 +16,10 @@
     --main-check-img: url("../images/Check.svg");
     --hello-color: #f7f5ff;
     --main-follow-bg: #6b50ff;
+    --right-show: url("../images/light-right.svg");
+    --section-bg-color: #f4fbff;
+    --section-box-hover: #fff;
+    --shadow-color: #cde3ef;
 }
 
 .dark {
@@ -36,6 +40,10 @@
     --main-check-img: url("../images/Check-dark.svg");
     --hello-color: #555;
     --main-follow-bg: linear-gradient(53deg, #1A1822 0%, #9040E3 100%), #6B50FF;
+    --right-show: url("../images/dark-right.svg");
+    --section-bg-color: #211f25;
+    --section-box-hover: #555;
+    --shadow-color: #555;
 }
 
 
@@ -878,12 +886,116 @@ main {
 .news {
     padding-top: 80px;
     padding-bottom: 80px;
+    background-color: var(--section-bg-color);
 }
 
+.news__title {
+    margin-bottom: 5px;
+    color: var(--main-title-color);
+    font-size: 36px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.36px;
+    text-align: center;
+}
+
+.news__text {
+    margin-bottom: 30px;
+    color: var(--main-text-color);
+    text-align: center;
+    font-size: 17.778px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.box {
+    border-radius: 8px;
+    max-width: 343px;
+    width: 100%;
+    margin-right: auto;
+    margin-bottom: 15px;
+    margin-left: auto;
+}
+
+.box:hover {
+    background-color: var(--section-box-hover);
+    box-shadow: 0px 4px 14px 0px var(--shadow-color);
+}
+
+.box:hover .box__link::after {
+    background-image: url("../images/light-ping-right.svg");
+}
+
+.box__img {
+    max-width: 343px;
+    width: 100%;
+}
+
+.box__inner {
+    padding: 23.4px;
+}
+
+.box__www {
+    display: inline-block;
+    margin-right: 16px;
+    color: var(--main-title-color);
+    font-size: 13.659px;
+    font-weight: 600;
+    line-height: 150%; 
+}
+
+.box__time {
+    color: var(--main-text-color);
+    font-size: 13.659px;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.box__title {
+    margin-top: 16px;
+    margin-bottom: 8px;
+    color: var(--main-title-color);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.box__text {
+    color: var(--main-text-color);
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+    margin-bottom: 31px;
+}
+
+.box__link {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    color: var(--main-pink-color);
+    font-size: 15.61px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    text-decoration: none;
+}
+
+.box__link::after {
+    width: 16px;
+    height: 16px;
+    content: "";
+    background-image: var(--right-show);
+}
+
+/* FOOTER SITE  */
 
 
-
-
+.site__footer {
+    background-color: #211f25;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
 
 
 
@@ -923,7 +1035,7 @@ main {
         font-size: 16px;
         margin-bottom: 42px;
     }
-
+    
     .follow__inner {
         padding-top: 100px;
         padding-bottom: 100px;
@@ -933,19 +1045,19 @@ main {
         font-size: 36px;
         margin-bottom: 24px;
     }
-
+    
     .follow__text {
         font-size: 15px;
     }
-
+    
     .follow__form {
         justify-content: space-between;
     }
-
+    
     .follow__input {
         max-width: 365px;
     }
-
+    
     .follow__btn {
         max-width: 132px;
     }
@@ -1238,8 +1350,8 @@ main {
     .price__item {
         padding: 22px;
     }
-
-
+    
+    
     .follow__inner {
         padding-top: 100px;
         padding-bottom: 100px;
@@ -1249,22 +1361,31 @@ main {
         font-size: 40px;
         margin-bottom: 24px;
     }
-
+    
     .follow__text {
         font-size: 16px;
     }
-
+    
     .follow__form {
         justify-content: space-between;
         margin-bottom: 15px;
     }
-
+    
     .follow__input {
         max-width: 365px;
     }
-
+    
     .follow__btn {
         max-width: 132px;
+    }
+
+    .box {
+        max-width: 343px;
+        width: 100%;
+    }
+
+    .news__list {
+        
     }
     
 }
@@ -1576,7 +1697,7 @@ main {
     .price__subitem {
         font-size: 16px;
     }
-
+    
     .follow__inner {
         padding-top: 112px;
         padding-bottom: 112px;
@@ -1586,22 +1707,47 @@ main {
         font-size: 48px;
         margin-bottom: 24px;
     }
-
+    
     .follow__text {
         font-size: 18px;
         margin-bottom: 40px;
     }
-
+    
     .follow__form {
         justify-content: space-between;
         margin-bottom: 20px;
     }
-
+    
     .follow__input {
         max-width: 365px;
     }
-
+    
     .follow__btn {
         max-width: 132px;
+    }
+
+    .news__list {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .box {
+        max-width: 405px;
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .box__img {
+        max-width: 405px;
+        width: 100%;
+    }
+
+    .box__title {
+        font-size: 24px;
+    }
+
+    .box__text {
+        font-size: 16px;
     }
 }
